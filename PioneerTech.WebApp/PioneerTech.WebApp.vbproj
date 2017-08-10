@@ -120,6 +120,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\PioneerTechMasterPage.Master.designer.vb">
+      <DependentUpon>PioneerTechMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PioneerTechMasterPage.Master.vb">
+      <DependentUpon>PioneerTechMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -140,6 +147,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="packages.config" />
+    <Content Include="UI\PioneerTechMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
