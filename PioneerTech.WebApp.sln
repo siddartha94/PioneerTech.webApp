@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.Model", "Pionee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.DAL", "PioneerTech.DAL\PioneerTech.DAL.csproj", "{D8F30D00-A1BE-41F5-93D8-CCD8BAFA16E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTechSystem.DAL", "PioneerTechSystem.DAL\PioneerTechSystem.DAL.csproj", "{9EAE8F3A-C670-4739-9228-3C3B0605AAD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D8F30D00-A1BE-41F5-93D8-CCD8BAFA16E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8F30D00-A1BE-41F5-93D8-CCD8BAFA16E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8F30D00-A1BE-41F5-93D8-CCD8BAFA16E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EAE8F3A-C670-4739-9228-3C3B0605AAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAE8F3A-C670-4739-9228-3C3B0605AAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAE8F3A-C670-4739-9228-3C3B0605AAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAE8F3A-C670-4739-9228-3C3B0605AAD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
