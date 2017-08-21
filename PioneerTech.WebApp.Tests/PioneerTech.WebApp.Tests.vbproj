@@ -116,12 +116,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PioneerTech.WebApp\PioneerTech.WebApp.vbproj">
-      <Project>{7C8D2EB5-EEB0-40DB-96BC-EC40337915C0}</Project>
-      <Name>PioneerTech.WebApp</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

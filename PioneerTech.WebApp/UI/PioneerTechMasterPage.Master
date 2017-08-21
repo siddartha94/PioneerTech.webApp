@@ -1,6 +1,12 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PioneerTechMasterPage.master.vb" Inherits="PioneerTech.WebApp.PioneerTechMasterPage" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PioneerTechMasterPage.master.vb" Inherits="PioneerTech.WebApp.PioneerTechMasterPage<!DOCTYPE html>
 
-<!DOCTYPE html>
+<script runat="server">
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
+
 
 <html>
 <head runat="server">
@@ -13,17 +19,24 @@
 <body>
     <form id="MainMasterPage" runat="server">
         <div>
-            <div id= "Header" class="header"></div>
-            <div> id="NavigatinalPanel"</div>
-            <div> id="Footer"</div>
+            <div id= "header" class="header" >
+            </div> 
+            <div id="NavigatinalPanel" class ="Navigationpanel"></div>
+            
+            <div id="Footer" class="Footer"></div>
+            
+        </div>
+            
             <div id="content" class="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
             </div>
-            
-            
-        </div>
+        <asp:Menu ID="Menu1" runat="server">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/UI/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
     </form>
 </body>
 </html>

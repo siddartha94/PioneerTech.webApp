@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0630C51B-6705-4B91-9BF5-D5643F46A17C}</ProjectGuid>
+    <ProjectGuid>{E7B6D7F1-4750-4C5F-89FE-76194A5516DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PioneeerTech.WebApp.Tests</RootNamespace>
-    <AssemblyName>PioneeerTech.WebApp.Tests</AssemblyName>
+    <RootNamespace>WebApplication2.Tests</RootNamespace>
+    <AssemblyName>WebApplication2.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,13 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PioneeerTech.WebApp\PioneeerTech.WebApp.csproj">
-      <Project>{E6EA7FFF-FA30-4EE8-A34C-00EE9CF6FF5C}</Project>
-      <Name>PioneeerTech.WebApp</Name>
+    <ProjectReference Include="..\WebApplication2\WebApplication2.csproj">
+      <Project>{278A2BC6-BFBF-4F7D-B174-63565556E303}</Project>
+      <Name>WebApplication2</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -56,6 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -65,7 +66,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="Content\MainMasterPageStyleSheet.css" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="UI\CompanyDetails.aspx" />
+    <Content Include="UI\EducationDetails.aspx" />
+    <Content Include="UI\EmployeeDetails.aspx" />
+    <Content Include="UI\Home.aspx" />
+    <Content Include="UI\PioneerTechMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,18 +84,84 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="UI\ProjectDetails.aspx" />
+    <Content Include="UI\TechnicalDetails.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\CompanyDetails.aspx.cs">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CompanyDetails.aspx.designer.cs">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EducationDetails.aspx.cs">
+      <DependentUpon>EducationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\EducationDetails.aspx.designer.cs">
+      <DependentUpon>EducationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeDetails.aspx.cs">
+      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeDetails.aspx.designer.cs">
+      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PioneerTechMasterPage.Master.cs">
+      <DependentUpon>PioneerTechMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PioneerTechMasterPage.Master.designer.cs">
+      <DependentUpon>PioneerTechMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProjectDetails.aspx.cs">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ProjectDetails.aspx.designer.cs">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TechnicalDetails.aspx.cs">
+      <DependentUpon>TechnicalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TechnicalDetails.aspx.designer.cs">
+      <DependentUpon>TechnicalDetails.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PioneerTech.Models\PioneerTech.Models.csproj">
+      <Project>{c99c5846-6477-4058-916e-c41bfe59c19c}</Project>
+      <Name>PioneerTech.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PioneerTech.Tests\PioneerTech.WebApp.Tests.csproj">
+      <Project>{e7b6d7f1-4750-4c5f-89fe-76194a5516de}</Project>
+      <Name>PioneerTech.WebApp.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PioneerTechSystem.DAL\PioneerTechSystem.DAL.csproj">
+      <Project>{9eae8f3a-c670-4739-9228-3c3b0605aad3}</Project>
+      <Name>PioneerTechSystem.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

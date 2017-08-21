@@ -96,7 +96,11 @@
   <ItemGroup>
     <Content Include="Content\MainMasterPageStyleSheet.css" />
     <Content Include="Global.asax" />
+    <Content Include="UI\CompanyDetails.aspx" />
+    <Content Include="UI\EducationalDetails.aspx" />
+    <Content Include="UI\EmployeeDetails.aspx" />
     <Content Include="UI\Home.aspx" />
+    <Content Include="UI\ProjectDetails.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +126,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\CompanyDetails.aspx.designer.vb">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CompanyDetails.aspx.vb">
+      <DependentUpon>CompanyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UI\EducationalDetails.aspx.designer.vb">
+      <DependentUpon>EducationalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EducationalDetails.aspx.vb">
+      <DependentUpon>EducationalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeDetails.aspx.designer.vb">
+      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeDetails.aspx.vb">
+      <DependentUpon>EmployeeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="UI\Home.aspx.designer.vb">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
@@ -135,6 +160,13 @@
     <Compile Include="UI\PioneerTechMasterPage.Master.vb">
       <DependentUpon>PioneerTechMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ProjectDetails.aspx.designer.vb">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProjectDetails.aspx.vb">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

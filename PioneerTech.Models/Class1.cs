@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PioneerTech.DAL
+namespace PioneerTech.Models
 {
     public class Class1
     {

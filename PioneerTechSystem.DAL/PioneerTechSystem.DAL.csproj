@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +43,16 @@
   <ItemGroup>
     <Compile Include="EmployeeDataAccessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PioneerTech.Models\PioneerTech.Models.csproj">
+      <Project>{c99c5846-6477-4058-916e-c41bfe59c19c}</Project>
+      <Name>PioneerTech.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PioneerTechConsultancySystem.Model\PioneerTechConsultancySystem.Model.csproj">
+      <Project>{71198315-3656-4c43-831e-efa642c7e296}</Project>
+      <Name>PioneerTechConsultancySystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
