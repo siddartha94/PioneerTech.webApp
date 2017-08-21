@@ -134,7 +134,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sqleducationdetails = @"INSERT INTO Education_Details(Passing_Year,Course,specialization)VALUES('" + education.Course + "'," + "'" + education.specialization + "'," + "" + education.Passing_Year + "')";
+                string sqleducationdetails = @"INSERT INTO Education_Details(Course,specialization,Passing_Year)VALUES('" + education.Course + "'," + "'" + education.specialization + "'," + "" + education.Passing_Year + ")";
                 SqlCommand command;
                 command = new SqlCommand(sqleducationdetails, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -251,7 +251,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sqltechnicaldetails = @"INSERT INTO Technical_Details(Programming_Languages,Databases,UI)VALUES('" + technical.Programming_Languages + "'," + "'" + technical.Data_Bases + "'," + "'" + technical.UI + "')";
+                string sqltechnicaldetails = @"INSERT INTO Technical_Details(UI,Programming_Languages,Data_Bases)VALUES('" + technical.UI+ "'," + "'" + technical.Programming_Languages + "'," + "'" + technical.Data_Bases+ "')";
                 SqlCommand command;
                 command = new SqlCommand(sqltechnicaldetails, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -443,7 +443,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sqlprojectdetails = @"INSERT INTO Project_Details(projectID,client,Location,Roles_SW)VALUES(" + project.EmployeeID + "," + "'" + project.Project_ID + "'," + "'" + project.Client + "'," + "'" + project.Location_tx + "'," + "'" + project.Roles_SW + "')";
+                string sqlprojectdetails = @"INSERT INTO Project_Details(EmployeeID,Project_ID,client,Location_tx,Roles_SW)VALUES(" + project.EmployeeID + "," + "'" + project.Project_ID + "'," + "'" + project.Client + "'," + "'" + project.Location_tx + "'," + "'" + project.Roles_SW + "')";
                 SqlCommand command;
                 command = new SqlCommand(sqlprojectdetails, mysqlconnection);
                 result = command.ExecuteNonQuery();
