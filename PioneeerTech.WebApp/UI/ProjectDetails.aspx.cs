@@ -62,7 +62,7 @@ namespace PioneeerTech.WebApp.UI
                 ProjectDetailsModel pmodel = new ProjectDetailsModel()
                 {
                     EmployeeID = Convert.ToInt32(EmployeeIDDropDownList.SelectedValue),
-                    
+                    Project_ID=Convert.ToInt32(Project_NameTextBox.Text),
                     Client = Client_NameTextBox.Text,
                     Location_tx = LocationTextBox.Text,
                     Roles_SW = RolesTextBox.Text,

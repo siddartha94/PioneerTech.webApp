@@ -49,15 +49,6 @@ namespace PioneeerTech.WebApp.UI {
         protected global::System.Web.UI.WebControls.DropDownList EmployeeIDDropDownList;
         
         /// <summary>
-        /// Contact_NumberLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Contact_NumberLabel;
-        
-        /// <summary>
         /// Contact_NumberTextBox control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace PioneeerTech.WebApp.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Contact_NumberTextBox;
-        
-        /// <summary>
-        /// LocationLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LocationLabel;
         
         /// <summary>
         /// LocationTextBox control.

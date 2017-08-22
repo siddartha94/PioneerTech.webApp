@@ -23,16 +23,14 @@
         </tr>
         <tr id="Contact_NumberRow">
             <td>
-                <asp:Label ID="Contact_NumberLabel" runat="server" Text="ContactNumber"></asp:Label>
-            </td>
+                Contact_NO</td>
             <td>
                 <asp:TextBox ID="Contact_NumberTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr id="LocationRow">
             <td>
-                <asp:Label ID="LocationLabel" runat="server" Text="Location"></asp:Label>
-            </td>
+                Location_C</td>
             <td>
                 <asp:TextBox ID="LocationTextBox" runat="server"></asp:TextBox>
             </td>

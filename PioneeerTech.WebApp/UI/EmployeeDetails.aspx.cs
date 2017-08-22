@@ -60,6 +60,32 @@ namespace PioneeerTech.WebApp.UI
 
         protected void EditButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                EmployeeDetailsModel empeditmodels = new EmployeeDetailsModel()
+                {
+                    EmployeeID = Convert.ToInt32(EmployeeIDDropDownList.SelectedValue),
+                    Employee_Name = First_NameTextBox.Text,
+                    Last_Name = Last_NameTextBox.Text,
+                    Email = EmailTextBox.Text,
+                    Mobile_Number = Convert.ToInt64(Mobile_NumberTextBox.Text),
+                    Address = Address1TextBox.Text,
+                    Current_Country = Current_CountryTextBox.Text,
+                    Home_Country = Home_CountryTextBox.Text,
+                    ZipCode = Convert.ToInt32(ZipCodeTextBox.Text),
+                };
+                EmployeeDataAccessLayer empeditaccess = new EmployeeDataAccessLayer();
+                string emedit = empeditaccess.Editemployee(empeditmodels);
+                if (emedit.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been updated successfully!');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Details have been updated: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
+            }
 
         }
 

@@ -85,7 +85,7 @@ namespace PioneerTechSystem.DAL
             while (employeedatareader.Read())
             {
                 empdmodel.EmployeeID = employeedatareader.GetInt32(employeedatareader.GetOrdinal("EmployeeID"));
-                empdmodel.Employee_Name = employeedatareader.GetString(employeedatareader.GetOrdinal("First_Name"));
+                empdmodel.Employee_Name = employeedatareader.GetString(employeedatareader.GetOrdinal("Employee_Name"));
                 empdmodel.Last_Name = employeedatareader.GetString(employeedatareader.GetOrdinal("Last_Name"));
                 empdmodel.Email = employeedatareader.GetString(employeedatareader.GetOrdinal("Email"));
                 empdmodel.Mobile_Number = employeedatareader.GetInt64(employeedatareader.GetOrdinal("Mobile_Number"));
@@ -105,7 +105,7 @@ namespace PioneerTechSystem.DAL
             {
                 string connectionstring = "Data Source = LAPTOP-TBFNHHOI; Initial Catalog = PioneerEmployeeDB;Integrated Security=True"; SqlConnection mysqlconnection = new SqlConnection(connectionstring); 
                 mysqlconnection.Open();
-                string sql = @"UPDATE Employee_Details SET First_Name='" + emmodel.Employee_Name + "',Last_Name='" + emmodel.Last_Name + "',Mobile_Number=" + emmodel.Mobile_Number + ",Address='" + emmodel.Address + "',Current_Country='" + emmodel.Current_Country + "',Home_Country='" + emmodel.Home_Country + "',ZipCode=" + emmodel.ZipCode + " WHERE EmployeeID=" + emmodel.EmployeeID + "";
+                string sql = @"UPDATE Employee_Details SET Employee_Name='" + emmodel.Employee_Name + "',Last_Name='" + emmodel.Last_Name + "',Mobile_Number=" + emmodel.Mobile_Number + ",Address='" + emmodel.Address + "',Current_Country='" + emmodel.Current_Country + "',Home_Country='" + emmodel.Home_Country + "',ZipCode=" + emmodel.ZipCode + " WHERE EmployeeID=" + emmodel.EmployeeID + "";
                 SqlCommand command;
                 command = new SqlCommand(sql, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -219,7 +219,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sql = @"UPDATE Education_Details SET CourseType='" + edumodel.Course + "',CourseSpecialisation='" + edumodel.specialization + "',YearOfPass=" + edumodel.Passing_Year + " WHERE EmployeeID=" + edumodel.EmployeeID + "";
+                string sql = @"UPDATE Education_Details SET Course='" + edumodel.Course + "',specialization='" + edumodel.specialization + "',Passing_Year=" + edumodel.Passing_Year + " WHERE EmployeeID=" + edumodel.EmployeeID + "";
                 SqlCommand command;
                 command = new SqlCommand(sql, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -344,7 +344,7 @@ namespace PioneerTechSystem.DAL
                 string connectionstring = "Data Source = LAPTOP-TBFNHHOI; Initial Catalog = PioneerEmployeeDB;Integrated Security=True";
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sqlcompanydetails = @"INSERT INTO Company_Details(Employer_Name,Company_Details,Contact_NO,Location_C,Website)VALUES('" + company.Employer_Name + "'," + "" + company.Company_Details + "," + "" + company.Contact_NO + "," + "'" + company.Location_C + "'," + "'" + company.Website + "')";
+                string sqlcompanydetails = @"INSERT INTO Company_Details(Employer_Name,Contact_NO,Location_C,Website)VALUES('" + company.Employer_Name + "'," + company.Contact_NO + "," + "'" + company.Location_C + "'," + "'" + company.Website + "')";
                 SqlCommand command;
                 command = new SqlCommand(sqlcompanydetails, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -415,7 +415,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sql = @"UPDATE Company_Details SET Employer_Name='" + companydetails.Employer_Name + "',Contact_Number='" + companydetails.Contact_NO + "',Location='" + companydetails.Location_C + "',Website='" + companydetails.Website + "' WHERE EmployeeID=" + companydetails.EmployeeID + "";
+                string sql = @"UPDATE Company_Details SET Employer_Name='" + companydetails.Employer_Name + "',Contact_NO=" + companydetails.Contact_NO + ",Location_C='" + companydetails.Location_C + "',Website='" + companydetails.Website + "' WHERE EmployeeID=" + companydetails.EmployeeID;
                 SqlCommand command;
                 command = new SqlCommand(sql, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -513,7 +513,7 @@ namespace PioneerTechSystem.DAL
 
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sql = @"UPDATE Project_Details SET EmployeeID=" + projectdetails.EmployeeID + ",Project_Name='" + projectdetails.Project_ID + "',Client_Name='" + projectdetails.Client + "',Location = '" + projectdetails.Location_tx + "',Roles='" + projectdetails.Roles_SW + "' WHERE EmployeeID=" + projectdetails.EmployeeID + "";
+                string sql = @"UPDATE Project_Details SET EmployeeID=" + projectdetails.EmployeeID + ",Project_ID=' + projectdetails.Project_ID + ',Client='" + projectdetails.Client + "',Location_tx = '" + projectdetails.Location_tx + "',Roles_SW='" + projectdetails.Roles_SW + "' WHERE EmployeeID=" + projectdetails.EmployeeID + "";
                 SqlCommand command;
                 command = new SqlCommand(sql, mysqlconnection);
                 result = command.ExecuteNonQuery();
